@@ -8,6 +8,7 @@ django = "*"
 lxml = "*"
 requests = "*"
 bs4 = "*"
+gunicorn = "*"
 
 [dev-packages]
 
