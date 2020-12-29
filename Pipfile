@@ -9,6 +9,7 @@ lxml = "*"
 requests = "*"
 bs4 = "*"
 gunicorn = "*"
+whitenoise = "*"
 
 [dev-packages]
 
