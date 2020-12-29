@@ -1,36 +1,89 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <form method='POST'>{% csrf_token %}
-    {{ form }}
-    <input type='submit' value='Send'>
-    </form>
 
-    {% if game == None %}
-        <h2> No game</h2>
-    {% elif game.strip == '' %}
-        <h2>Empty request</h2>
-    {% else %}
-        Game: {{ game }}
-        <br>
-        Epicgames: {{ epicgames_price }}
-        <br>
-        Playstation store: {{ playstationstore_price }}
-        <br>
-        Microsoft store: {{ microsoftstore_price }}
-        <br>
-        STeam: {{ steam_price }}
-        <br>
-        <br>
-        <br>
-        Steampay: {{ steampay_price }}
-        <br>
-        Gabestore: {{ gabestore_price }}
-        <br>
-        Icegames: {{ icegames_price }}
-        <br>
-        Gamefarm: {{ gamefarm_price }}
-        <br>
-        Steambuy: {{ steambuy_price }}
-    {% endif %}
+    <!--
+    <div class="d3">
+        <p>Fing a game</p>
+        <form method='POST'> 
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit"></button>
+        </form>
+    </div>
+
+    -->
+            <section>
+                <div class="container">
+                <form method='POST'> 
+                        {% csrf_token %}
+
+                        {{ form }}
+
+                        <div class="search"><input type="submit"></div>
+
+            
+                </form>
+                </div>
+
+
+                <div class="game_info">
+                    Game: {{ game }}
+                    <br>
+                    Epicgames: {{ epicgames_price }}
+                    <br>
+                    Playstation store: {{ playstationstore_price }}
+                    <br>
+                    Microsoft store: {{ microsoftstore_price }}
+                    <br>
+                    STeam: {{ steam_price }}
+                    <br>
+                    <br>
+                    <br>
+                    Steampay: {{ steampay_price }}
+                    <br>
+                    Gabestore: {{ gabestore_price }}
+                    <br>
+                    Icegames: {{ icegames_price }}
+                    <br>
+                    Gamefarm: {{ gamefarm_price }}
+                    <br>
+                    Steambuy: {{ steambuy_price }}
+                </div>
+            </section>
+<!--
+                {% if game == None %}
+                    <h2></h2>
+                {% elif game.strip == '' %}
+                    <h2>Empty request</h2>
+                {% else %}
+                    Game: {{ game }}
+                    <br>
+                    Epicgames: {{ epicgames_price }}
+                    <br>
+                    Playstation store: {{ playstationstore_price }}
+                    <br>
+                    Microsoft store: {{ microsoftstore_price }}
+                    <br>
+                    STeam: {{ steam_price }}
+                    <br>
+                    <br>
+                    <br>
+                    Steampay: {{ steampay_price }}
+                    <br>
+                    Gabestore: {{ gabestore_price }}
+                    <br>
+                    Icegames: {{ icegames_price }}
+                    <br>
+                    Gamefarm: {{ gamefarm_price }}
+                    <br>
+                    Steambuy: {{ steambuy_price }}
+                {% endif %}
+
+
+
+
+                
+            -->
+
 {% endblock content %}
