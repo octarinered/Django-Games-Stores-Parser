@@ -43,4 +43,4 @@ class Service():
 
         price = self.__parse(link, soup, self.tag, self.htmlclass)
 
-        return price, link
+        return {'price': price, 'link':link}

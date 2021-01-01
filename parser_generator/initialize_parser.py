@@ -28,31 +28,31 @@ def get_price(game):
     steambuy = Service('https://steambuy.com/catalog/?q={}', game, '-', 'div', 'product-item__cost')
 
     prices = {
-        'epicgames': epicgames.output()[0],
-        'playstationstore': playstationstore.output()[0],
-        'microsoftstore': microsoftstore.output()[0],
-        'steam': steam.output()[0],
+        'epicgames': epicgames.output().get('price'),
+        'playstationstore': playstationstore.output().get('price'),
+        'microsoftstore': microsoftstore.output().get('price'),
+        'steam': steam.output().get('price'),
         # ---------------------------
-        'steampay': steampay.output()[0], 
-        'gabestore': gabestore.output()[0],
-        'icegames': icegames.output()[0],
-        'gamefarm': gamefarm.output()[0],
-        'steambuy': steambuy.output()[0]
+        'steampay': steampay.output().get('price'), 
+        'gabestore': gabestore.output().get('price'),
+        'icegames': icegames.output().get('price'),
+        'gamefarm': gamefarm.output().get('price'),
+        'steambuy': steambuy.output().get('price')
         }
 
     links = {
-        'epicgames': epicgames.output(),
-        'playstationstore': playstationstore.output(),
-        'microsoftstore': microsoftstore.output(),
-        'steam': steam.output(),
+        'epicgames': epicgames.output().get('link'),
+        'playstationstore': playstationstore.output().get('link'),
+        'microsoftstore': microsoftstore.output().get('link'),
+        'steam': steam.output().get('link'),
         # ---------------------------
-        'steampay': steampay.output(), 
-        'gabestore': gabestore.output(),
-        'icegames': icegames.output(),
-        'gamefarm': gamefarm.output(),
-        'steambuy': steambuy.output()
+        'steampay': steampay.output().get('link'), 
+        'gabestore': gabestore.output().get('link'),
+        'icegames': icegames.output().get('link'),
+        'gamefarm': gamefarm.output().get('link'),
+        'steambuy': steambuy.output().get('link')
     }
 
-    return prices
+    return {'price': prices, 'link':links}
 
 
