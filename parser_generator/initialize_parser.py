@@ -28,16 +28,16 @@ def get_price(game):
     steambuy = Service('https://steambuy.com/catalog/?q={}', game, '-', 'div', 'product-item__cost')
 
     prices = {
-        'epicgames': epicgames.output(),
-        'playstationstore': playstationstore.output(),
-        'microsoftstore': microsoftstore.output(),
-        'steam': steam.output(),
+        'epicgames': epicgames.output()[0],
+        'playstationstore': playstationstore.output()[0],
+        'microsoftstore': microsoftstore.output()[0],
+        'steam': steam.output()[0],
         # ---------------------------
-        'steampay': steampay.output(), 
-        'gabestore': gabestore.output(),
-        'icegames': icegames.output(),
-        'gamefarm': gamefarm.output(),
-        'steambuy': steambuy.output()
+        'steampay': steampay.output()[0], 
+        'gabestore': gabestore.output()[0],
+        'icegames': icegames.output()[0],
+        'gamefarm': gamefarm.output()[0],
+        'steambuy': steambuy.output()[0]
         }
 
     links = {
