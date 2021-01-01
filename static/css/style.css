@@ -1,200 +1,178 @@
-@import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-html,
-body {
-	width: 100%;
-	height: 100%;
-}
 
 body {
-    background: #252525;
-    display: flex;
-    justify-content: center;
-
-}
-
-form{
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	justify-content: space-around;
-}
-
-section{
-    display: flex;
-    flex-direction: row;
-}
-
-
-
-.container {
-    position: relative;
-	margin-top: 200px;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 300px;
-	height: 100px;
-}
-
-.container .search {
-	position: absolute;
-	margin: auto;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width: 80px;
-	height: 80px;
-	background: crimson;
-	border-radius: 50%;
-	transition: all 1s;
-	z-index: 4;
-	box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
-}
-
-.container .search:hover {
-	cursor: pointer;
-}
-
-.container .search::before {
-	content: "";
-	position: absolute;
-	margin: auto;
-	top: 22px;
-	right: 0;
-	bottom: 0;
-	left: 22px;
-	width: 12px;
-	height: 2px;
-	background: white;
-	transform: rotate(45deg);
-	transition: all .5s;
-}
-
-.container .search::after {
-	content: "";
-	position: absolute;
-	margin: auto;
-	top: -5px;
-	right: 0;
-	bottom: 0;
-	left: -5px;
-	width: 25px;
-	height: 25px;
-	border-radius: 50%;
-	border: 2px solid white;
-	transition: all .5s;
-}
-
-.container input {
+	background: #212129;
 	font-family: 'Inconsolata', monospace;
-	position: absolute;
-	margin: auto;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width: 50px;
-	height: 50px;
-	outline: none;
-	border: none;
-	background: crimson;
+ }
+ 
+ ::selection {
+	background: #212129;
+ }
+ 
+ section{
+	 width: 600px;
+	 margin: 200px auto;
+ }
+ 
+ 
+ .search-wrapper {
+	 position: fixed;
+	 left: 50%;
+	 margin-left: -250px;
+ }
+ .search-wrapper.active {}
+ 
+ .search-wrapper .input-holder {    
+	 height: 70px;
+	 width:70px;
+	 overflow: hidden;
+	 background: rgba(255,255,255,0);
+	 border-radius:6px;
+	 position: relative;
+	 transition: all 0.3s ease-in-out;
+ }
+ .search-wrapper.active .input-holder {
+	 width:450px;
+	 border-radius: 50px;
+	 background: rgba(0,0,0,0.5);
+	 transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+ }
+ .search-wrapper .input-holder .search-input {
+	 width:100%;
+	 height: 50px;
+	 padding:0px 70px 0 20px;
+	 opacity: 0;
+	 position: absolute;
+	 top:0px;
+	 left:0px;
+	 background: transparent;
+	 box-sizing: border-box;
+	 border:none;
+	 outline:none;
+	 font-family:"Open Sans", Arial, Verdana;
+	 font-size: 16px;
+	 font-weight: 400;
+	 line-height: 20px;
+	 color:#FFF;
+	 transform: translate(0, 60px);
+	 transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+	 transition-delay: 0.3s;
+ }
+ .search-wrapper.active .input-holder .search-input {
+	 opacity: 1;
+	 transform: translate(0, 10px);
+ }
+ .search-wrapper .input-holder .search-icon {
+	 width:70px;
+	 height:70px;
+	 border:none;
+	 border-radius:6px;
+	 background: #FFF;
+	 padding:0px;
+	 outline:none;
+	 position: relative;
+	 z-index: 2;
+	 float:right;
+	 cursor: pointer;
+	 transition: all 0.3s ease-in-out;
+ }
+ .search-wrapper.active .input-holder .search-icon {
+	 width: 50px;
+	 height:50px;
+	 margin: 10px;
+	 border-radius: 30px;
+ }
+ .search-wrapper .input-holder .search-icon span {
+	 width:22px;
+	 height:22px;
+	 display: inline-block;
+	 vertical-align: middle;
+	 position:relative;
+	 transform: rotate(45deg);
+	 transition: all .4s cubic-bezier(0.650, -0.600, 0.240, 1.650);
+ }
+ .search-wrapper.active .input-holder .search-icon span {
+	 transform: rotate(-45deg);
+ }
+ .search-wrapper .input-holder .search-icon span::before, .search-wrapper .input-holder .search-icon span::after {
+	 position: absolute; 
+	 content:'';
+ }
+ .search-wrapper .input-holder .search-icon span::before {
+	 width: 4px;
+	 height: 11px;
+	 left: 9px;
+	 top: 18px;
+	 border-radius: 2px;
+	 background: #FE5F55;
+ }
+ .search-wrapper .input-holder .search-icon span::after {
+	 width: 14px;
+	 height: 14px;
+	 left: 0px;
+	 top: 0px;
+	 border-radius: 16px;
+	 border: 4px solid #FE5F55;
+ }
+ .search-wrapper .close {
+	 position: absolute;
+	 z-index: 1;
+	 top:24px;
+	 right:20px;
+	 width:25px;
+	 height:25px;
+	 cursor: pointer;
+	 transform: rotate(-180deg);
+	 transition: all .3s cubic-bezier(0.285, -0.450, 0.935, 0.110);
+	 transition-delay: 0.2s;
+ }
+ .search-wrapper.active .close {
+	 right:-50px;
+	 transform: rotate(45deg);
+	 transition: all .6s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+	 transition-delay: 0.5s;
+ }
+ .search-wrapper .close::before, .search-wrapper .close::after {
+	 position:absolute;
+	 content:'';
+	 background: #FE5F55;
+	 border-radius: 2px;
+ }
+ .search-wrapper .close::before {
+	 width: 5px;
+	 height: 25px;
+	 left: 10px;
+	 top: 0px;
+ }
+ .search-wrapper .close::after {
+	 width: 25px;
+	 height: 5px;
+	 left: 0px;
+	 top: 10px;
+ }
+
+
+
+
+
+
+
+
+
+
+ .game_info{
+	 padding-top: 100px;
+	 padding-left: 50px;
+	 color: white;
+ }
+
+a{
+    text-decoration: none;
 	color: white;
-	text-shadow: 0 0 10px crimson;
-	padding: 0 80px 0 20px;
-	border-radius: 30px;
-	box-shadow: 0 0 25px 0 crimson, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
-	transition: all 1s;
-	opacity: 0;
-	z-index: 5;
-	font-weight: bolder;
-	letter-spacing: 0.1em;
+ }
+a:visited{
+    color: white; 
 }
-
-.container input:hover {
-	cursor: pointer;
+a:active{
+    color: white;
 }
-
-.container input:focus {
-	width: 300px;
-	opacity: 1;
-	cursor: text;
-}
-
-.container input:focus ~ .search {
-	right: -250px;
-	background: #151515;
-	z-index: 6;
-}
-
-.container input:focus ~ .search::before {
-	top: 0;
-	left: 0;
-	width: 25px;
-}
-
-.container input:focus ~ .search::after {
-	top: 0;
-	left: 0;
-	width: 25px;
-	height: 2px;
-	border: none;
-	background: white;
-	border-radius: 0%;
-	transform: rotate(-45deg);
-}
-
-.container input::placeholder {
-	color: white;
-	opacity: 0.5;
-	font-weight: bolder;
-}
-
-.send_field{
-	position: absolute;
-	margin: auto;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width: 100px;
-	height: 100px;
-	background: crimson;
-	border-radius: 30px;
-	box-shadow: 0 0 25px 0 crimson, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
-
-	border: none;
-	text-decoration: none; /* убирать подчёркивание у ссылок */
-	user-select: none; /* убирать выделение текста */
-	outline: none; /* убирать контур в Mozilla */
-}
-
-
-.container .field:focus ~ .send_field {
-	width: 100px;
-	height: 50px;
-	color: rgba(255, 255, 255, 0.7);
-	font-weight: bolder;
-	transition: all 300ms ease-in-out;
-}
-
-
-.container .field:focus ~ .send_field:hover{
-	color: white;
-	transition: all 0ms ease-in-out;
-}
-
-
-.game_info{
-	margin: 200px;
-    padding: 20px;
-    background: #727272;
-}
-

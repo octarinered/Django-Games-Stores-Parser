@@ -2,22 +2,24 @@
 
 {% block content %}
             <section>
-                <div class="container">
-                <form method='POST'> 
-                        {% csrf_token %}
 
-                        {{ form }}
-
-                        <div class="search"></div>
-                        <input class='send_field' type="submit">
-
-            
-                </form>
+                <div class="search-wrapper">
+                    <div class="input-holder">
+                        <form method='POST' class="input-holder"> 
+                            {% csrf_token %}
+                            {{ form }}
+        
+                            <button class="search-icon" type="submit" onclick="searchToggle(this, event);"><span></span></button>
+                        </form>
+                    </div>
+                    <span class="close" onclick="searchToggle(this, event);"></span>
                 </div>
+                
 
-
+<!--
                 <div class="game_info">
                     Game: {{ game }}
+                    <br>
                     <br>
                     <a href="{{ epicgames_link }}" target="_blank">Epicgames</a> {{ epicgames_price }}
                     <br>
@@ -26,7 +28,6 @@
                     <a href="{{ microsoftstore_link }}" target="_blank">Microsoftstore</a> {{ microsoftstore_price }}
                     <br>
                     <a href="{{ steam_link }}" target="_blank">Steam</a> {{ steam_price }}
-                    <br>
                     <br>
                     <br>
                     <a href="{{ steampay_link }}" target="_blank">Steampay</a> {{ steampay_price }}
@@ -40,41 +41,43 @@
                     <a href="{{ steambuy_link }}" target="_blank">Steambuy</a> {{ steambuy_price }}
                 </div>
             </section>
-
+-->
             
-<!--
+
                 {% if game == None %}
                     <h2></h2>
                 {% elif game.strip == '' %}
                     <h2>Empty request</h2>
                 {% else %}
+                <div class="game_info">
                     Game: {{ game }}
                     <br>
-                    Epicgames: {{ epicgames_price }}
                     <br>
-                    Playstation store: {{ playstationstore_price }}
+                    <a href="{{ epicgames_link }}" target="_blank">Epicgames</a> {{ epicgames_price }}
                     <br>
-                    Microsoft store: {{ microsoftstore_price }}
+                    <a href="{{ playstationstore_link }}" target="_blank">Playstationstore: </a> {{ playstationstore_price }}
                     <br>
-                    STeam: {{ steam_price }}
+                    <a href="{{ microsoftstore_link }}" target="_blank">Microsoftstore</a> {{ microsoftstore_price }}
+                    <br>
+                    <a href="{{ steam_link }}" target="_blank">Steam</a> {{ steam_price }}
                     <br>
                     <br>
+                    <a href="{{ steampay_link }}" target="_blank">Steampay</a> {{ steampay_price }}
                     <br>
-                    Steampay: {{ steampay_price }}
+                    <a href="{{ gabestore_link }}" target="_blank">Gabestore</a> {{ gabestore_price }}
                     <br>
-                    Gabestore: {{ gabestore_price }}
+                    <a href="{{ icegames_link }}" target="_blank">Icegames</a> {{ icegames_price }}
                     <br>
-                    Icegames: {{ icegames_price }}
+                    <a href="{{ gamefarm_link }}" target="_blank">Gamefarm</a> {{ gamefarm_price }}
                     <br>
-                    Gamefarm: {{ gamefarm_price }}
-                    <br>
-                    Steambuy: {{ steambuy_price }}
+                    <a href="{{ steambuy_link }}" target="_blank">Steambuy</a> {{ steambuy_price }}
+                </div>
                 {% endif %}
 
 
 
 
                 
-            -->
+            
 
 {% endblock content %}
