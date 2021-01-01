@@ -40,6 +40,19 @@ def get_price(game):
         'steambuy': steambuy.output()
         }
 
+    links = {
+        'epicgames': epicgames.output(),
+        'playstationstore': playstationstore.output(),
+        'microsoftstore': microsoftstore.output(),
+        'steam': steam.output(),
+        # ---------------------------
+        'steampay': steampay.output(), 
+        'gabestore': gabestore.output(),
+        'icegames': icegames.output(),
+        'gamefarm': gamefarm.output(),
+        'steambuy': steambuy.output()
+    }
+
     return prices
 
 
