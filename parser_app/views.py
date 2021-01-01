@@ -10,21 +10,34 @@ def HomePage(request):
     if request.method == 'POST':
 
         game = request.POST.get('gameName')
-        price = initialize_parser.get_price(game)
+        parsed_data = initialize_parser.get_price(game)
 
         data = {
             'game':game, 
             #----------------------------
-            'epicgames_price': price['epicgames'], 
-            'playstationstore_price': price['playstationstore'],
-            'microsoftstore_price': price['microsoftstore'],
-            'steam_price': price['steam'],
+            'epicgames_price': parsed_data['price']['epicgames'], 
+            'playstationstore_price': parsed_data['price']['playstationstore'],
+            'microsoftstore_price': parsed_data['price']['microsoftstore'],
+            'steam_price': parsed_data['price']['steam'],
             #----------------------------
-            'steampay_price':price['steampay'], 
-            'gabestore_price':price['gabestore'],
-            'icegames_price': price['icegames'],
-            'gamefarm_price': price['gamefarm'],
-            'steambuy_price': price['steambuy'],
+            'steampay_price':parsed_data['price']['steampay'], 
+            'gabestore_price':parsed_data['price']['gabestore'],
+            'icegames_price': parsed_data['price']['icegames'],
+            'gamefarm_price': parsed_data['price']['gamefarm'],
+            'steambuy_price': parsed_data['price']['steambuy'],
+            #----------------------------
+            #----------------------------
+            #----------------------------
+            'epicgames_link': parsed_data['link']['epicgames'],
+            'playstationstore_link': parsed_data['link']['playstationstore'],
+            'microsoftstore_link': parsed_data['link']['microsoftstore'],
+            'steam_link': parsed_data['link']['steam'],
+            #----------------------------
+            'steampay_link':parsed_data['link']['steampay'], 
+            'gabestore_link':parsed_data['link']['gabestore'],
+            'icegames_link': parsed_data['link']['icegames'],
+            'gamefarm_link': parsed_data['link']['gamefarm'],
+            'steambuy_link': parsed_data['link']['steambuy'], 
             #----------------------------
             'form': search}
 
