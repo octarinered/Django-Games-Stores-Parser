@@ -2,6 +2,21 @@
 
 {% block content %}
             <section>
+
+                <div class='rectangle first'></div>
+                <div class='rectangle second'></div>
+                <div class='rectangle third'></div>
+                <div class='rectangle fourth'></div>
+                <div class='rectangle fifth'></div>
+                <div class='rectangle sixth'></div>
+                <div class='rectangle seventh'></div>
+                <div class='rectangle eights'></div>
+                <div class='rectangle nineth'></div>
+
+                <div class='rectangle tenth'></div>
+                <div class='rectangle eleventh'></div>
+
+
                 <form class="search" method='POST'>
                     {% csrf_token %}
 
@@ -9,37 +24,28 @@
                     <button type="submit">Search</button>
                 </form>   
 
-
-
-
-                {% if game == None %}
-                    <h2></h2>
-                {% elif game.strip == '' %}
-                    <h2>Empty request</h2>
-                {% else %}
                 <div class="game_info">
-                    <span>Game: <h1>{{ game }}</h1><h4>1999руб. <span class='rating'>94</span></h4></span>
+                    <span>Game: <h1>cyberpunk 2077</h1><h4>1999руб. <span class='rating'>94</span></h4></span>
                     <hr>
-                    <a href="{{ epicgames_link }}" target="_blank">Epicgames:</a> {{ epicgames_price }}
+                    <a href="#" target="_blank">Epicgames:</a> 1999руб.
                     <br>
-                    <a href="{{ playstationstore_link }}" target="_blank">Playstationstore: </a> {{ playstationstore_price }}
+                    <a href="#" target="_blank">Playstationstore:</a> 2499руб.
                     <br>
-                    <a href="{{ microsoftstore_link }}" target="_blank">Microsoftstore:</a> {{ microsoftstore_price }}
+                    <a href="#" target="_blank">Microsoftstore:</a> 2499руб.
                     <br>
-                    <a href="{{ steam_link }}" target="_blank">Steam:</a> {{ steam_price }}
+                    <a href="#" target="_blank">Steam:</a> 1999руб.
                     <br>
                     <br>
-                    <a href="{{ steampay_link }}" target="_blank">Steampay:</a> {{ steampay_price }}
+                    <a href="#" target="_blank">Steampay:</a> 1599руб.
                     <br>
-                    <a href="{{ gabestore_link }}" target="_blank">Gabestore:</a> {{ gabestore_price }}
+                    <a href="#" target="_blank">Gabestore:</a> Game is out of stock or entered incorrectly!
                     <br>
-                    <a href="{{ icegames_link }}" target="_blank">Icegames:</a> {{ icegames_price }}
+                    <a href="#" target="_blank">Icegames:</a> 1699руб.
                     <br>
-                    <a href="{{ gamefarm_link }}" target="_blank">Gamefarm:</a> {{ gamefarm_price }}
+                    <a href="#" target="_blank">Gamefarm:</a> 1699руб.
                     <br>
-                    <a href="{{ steambuy_link }}" target="_blank">Steambuy:</a> {{ steambuy_price }}
+                    <a href="#" target="_blank">Steambuy:</a> Game is out of stock or entered incorrectly!
                 </div>
-                {% endif %}
 
             </section>
 
@@ -91,7 +97,13 @@
                     <a href="{{ gamefarm_link }}" target="_blank">Gamefarm</a> {{ gamefarm_price }}
                     <br>
                     <a href="{{ steambuy_link }}" target="_blank">Steambuy</a> {{ steambuy_price }}
-                </div>
+
+
+
+
+
+
+
 
 
 
@@ -125,6 +137,7 @@
                     <a href="{{ steambuy_link }}" target="_blank">Steambuy:</a> {{ steambuy_price }}
                 </div>
                 {% endif %}
+                </div>
 
             -->
 

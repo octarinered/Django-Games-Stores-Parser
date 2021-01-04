@@ -1,0 +1,113 @@
+.rectangle{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.07);
+    z-index: -1;
+}
+
+
+
+.rectangle.first{
+    transform: rotate(-113deg);
+    margin: 100px 0 0 -100px;
+    width: 230px;
+    height: 230px;
+}
+
+.rectangle.second{
+    margin: 300px 0 0 -250px;
+    transform: rotate(98deg);
+    width: 150px;
+    height: 150px;
+}
+
+.rectangle.third{
+    margin: 100px 0 0 -500px;
+    transform: rotate(67deg);
+    width: 250px;
+    height: 250px;
+}
+
+.rectangle.fourth{
+    margin: 200px 0 0 500px;
+    transform: rotate(67deg);
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+.rectangle.fifth{
+    margin: 100px 0 0 400px;
+    transform: rotate(99deg);
+    width: 250px;
+    height: 250px;
+}
+
+
+
+.rectangle.sixth{
+    margin: 450px 0 0 -250px;
+    transform: rotate(75deg);
+    width: 350px;
+    height: 350px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.rectangle.seventh{
+    margin: 400px 0 0 200px;
+    transform: rotate(-56deg);
+    width: 300px;
+    height: 300px;
+}
+
+.rectangle.eights{
+    margin: -100px 0 0 400px;
+    transform: rotate(192deg);
+    width: 100px;
+    height: 100px;
+}
+
+.rectangle.nineth{
+    margin: -200px 0 0 550px;
+    transform: rotate(33deg);
+    width: 400px;
+    height: 400px;
+}
+
+.rectangle.tenth{
+    margin: -300px 0 0 0px;
+    transform: rotate(24deg);
+    width: 320px;
+    height: 320px;
+}
+
+.rectangle.eleventh{
+    margin: -200px 0 0 -400px;
+    transform: rotate(-75deg);
+    width: 420px;
+    height: 320px;
+}
+
+.rectangle.twelves{
+    margin: 100px 0 0 400px;
+    transform: rotate(-30deg);
+}
+
+.rectangle.thirdth{
+    margin: 100px 0 0 400px;
+    transform: rotate(-30deg);
+}
+
+.rectangle.fourteenth{
+    margin: 100px 0 0 400px;
+    transform: rotate(-30deg);
+}
+
+.rectangle.fifteenth{
+    margin: 100px 0 0 400px;
+    transform: rotate(-30deg);
+}
+
+
