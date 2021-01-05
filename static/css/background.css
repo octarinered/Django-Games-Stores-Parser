@@ -1,3 +1,4 @@
+/*
 .rectangle{
     position: absolute;
     width: 100px;
@@ -111,3 +112,24 @@
 }
 
 
+*/
+
+.overlay {
+    opacity: 0.1;
+    z-index: -1;
+    width: 100%; 
+    height:100%; 
+    display:block;
+}
+#nubexDiv {
+    top: 0; bottom: 0; left: 0; right: 0;
+    position: fixed;
+    overflow: hidden;
+}
+#nubexVideo {
+    top: 0; left: 0;
+    position: absolute;
+    width: auto; height: auto;
+    min-width: 100%; 
+    min-height: 100%; 
+}

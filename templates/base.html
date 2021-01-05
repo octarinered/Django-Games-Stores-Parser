@@ -13,10 +13,14 @@
     </head>
     <body>
 
+        <div id="nubexDiv" class="overlay">
+            <video id="nubexVideo" width="100%" height="auto" loop="loop" autoplay="autoplay" preload="auto">
+              <source src="{% static 'video/2.mp4'%}"></source>
+            </video>
+           </div>
 
         {% block content %}
         {% endblock content %}
-
 
         <script src="{% static 'js/index.js'%}"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
