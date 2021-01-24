@@ -1,4 +1,5 @@
-# Games Stores Parser on Django ![](https://img.shields.io/badge/python-v.3.8-orange)  ![](https://img.shields.io/badge/django-2.1-green) ![](https://img.shields.io/badge/-requests-ffea00) ![](https://img.shields.io/badge/-beautifulsoup4-ff69b4) ![](https://img.shields.io/badge/-lxml-00c3d9)
+# Games Stores Parser on Django 
+![](https://img.shields.io/badge/python-v.3.8-orange)  ![](https://img.shields.io/badge/django-2.1-green) ![](https://img.shields.io/badge/-requests-ffea00) ![](https://img.shields.io/badge/-beautifulsoup4-ff69b4) ![](https://img.shields.io/badge/-lxml-00c3d9)
 
 
 ## What it can
