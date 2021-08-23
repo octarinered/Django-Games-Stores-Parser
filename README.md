@@ -6,11 +6,6 @@
 
 #### Searches for the lowest price for a game among online stores and estimates for the same game among various sites!!
 
-
-## Usage
-Bot can be found at: **[games-stores-parser-django.herokuapp.com/](https://games-stores-parser-django.herokuapp.com/)** 
-> *May contain an obsolete version other than the one in the code above*
-
 #### If you want to run it on your server
 
  1. Install all required libraries Install all required libraries (from the "Technologies" list at the end of this file
